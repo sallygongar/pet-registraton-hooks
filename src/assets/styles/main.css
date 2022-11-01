@@ -16,16 +16,54 @@
 .photo{
   display: flex;
   flex-flow: column wrap;
-}
-
-.photo__avatar{
-  width: 100px;
-  height: 100px;
-  border: 2px dashed rgb(27, 49, 170);
   padding: 20px;
 }
 
+.photo__avatar{
+  width: 200px;
+  height: 200px;
+  border: 2px dashed rgb(27, 49, 170);
+  padding: 20px;
+  text-align: center;
+}
+
 .photo__file{
-  padding-top: 10px;
- padding-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.photo__file::before {
+  height: 30px;
+  background-color: #9559b6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Subir archivo'; /* testo por defecto */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.photo__file input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.title{
+  color: rgb(83, 81, 81);
+}
+
+.photo__avatar{
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  margin: auto 0;
 }

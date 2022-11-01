@@ -8,7 +8,7 @@ import '../../assets/styles/main.css';
 export default function PetsTemplate(){
   return(
     <div className='content-main'>
-      <h1>Registro para mascotas</h1>
+      <h1 className='title'>Registro para mascotas</h1>
       <div className='pets'>
         <div>
           <Photo/>
