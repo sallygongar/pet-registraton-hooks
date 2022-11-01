@@ -1,0 +1,31 @@
+.app{
+  margin: 0;
+  text-align: center;
+}
+
+.content-main{
+  
+}
+
+.pets{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.photo__avatar{
+  width: 100px;
+  height: 100px;
+  border: 2px dashed rgb(27, 49, 170);
+  padding: 20px;
+}
+
+.photo__file{
+  padding-top: 10px;
+ padding-bottom: 10px;
+}
