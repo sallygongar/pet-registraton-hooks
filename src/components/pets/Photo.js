@@ -1,4 +1,5 @@
 import React from "react";
+import Mascota from '../../assets/images/mascota.jpg';
 
 const Photo = () => {
   const photo = false
@@ -6,7 +7,10 @@ const Photo = () => {
     <div className="photo">
       <div className="photo__avatar">
         {
-          photo ? <image src="" alt="fulanit"/> : <span className="photo__avatar-label">Foto de mascota</span>
+          photo ? <img src="" alt="fulanit"/> : 
+          <div>
+            <img className="photo__avatar-mascota" src={Mascota} alt="mascota"/>
+          </div>
         }
       </div>
       <div className="photo__file">

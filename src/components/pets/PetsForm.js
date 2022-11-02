@@ -28,15 +28,15 @@ const PetsForm = () =>{
        </div>
        <div className="form-input">
           <label className="form-input__label">Raza</label>
-          <input type='text' name='raze'/>
+          <input type='text' name='race'/>
        </div>
        <div className="form-input">
           <label className="form-input__label">Peso</label>
-          <input type='text' name='size'/>
+          <input type='text' name='weight'/>
        </div>
        <div className="form-input">
           <label className="form-input__label">Esterilizado o castrado</label>
-          <select type="text" name="esterilizado">
+          <select type="text" name="sterilized">
             <option value="">select</option>
             <option value={false}>SI</option>
             <option value={true}>NO</option>
@@ -44,7 +44,7 @@ const PetsForm = () =>{
        </div>
        <div className="form-input">
           <label className="form-input__label">Nombre del dueño</label>
-          <input type='text' name='size'/>
+          <input type='text' name='owner'/>
        </div>
        <div className="form-button" >
           <button className="form-button__register" name="register" type="button">Registrar</button>

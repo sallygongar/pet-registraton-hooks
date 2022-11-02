@@ -3,10 +3,6 @@
   text-align: center;
 }
 
-.content-main{
-  
-}
-
 .pets{
   display: flex;
   flex-wrap: wrap;
@@ -66,4 +62,9 @@
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   margin: auto 0;
+}
+
+.photo__avatar-mascota{
+  width: 200px;
+  height: 200px;
 }

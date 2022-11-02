@@ -2,7 +2,6 @@ import React from 'react';
 import Photo from './Photo';
 import PetsForm from './PetsForm';
 
-
 import '../../assets/styles/main.css';
 
 export default function PetsTemplate(){
