@@ -68,3 +68,47 @@
   width: 200px;
   height: 200px;
 }
+
+.message-errors{
+  color: red;
+  font-family: 'Roboto'!important;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: left;
+  padding: 2px;
+}
+
+.alert{
+  content: "";
+  padding: 20px;
+  color: white;
+  margin: 20px auto;
+}
+
+.alert__success{
+  background-color: green;
+}
+
+.alert__error{
+  background-color: red;
+}
+
+.alert__inprocess{
+  background-color: rgb(194, 153, 18);
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert__close{
+  display: none;
+  transition: 0.3;
+}
