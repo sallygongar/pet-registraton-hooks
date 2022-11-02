@@ -2,7 +2,7 @@ import React from "react";
 
 import '../../assets/styles/forms.css';
 
-const PetsForm = ({pet, errors, onChangeInput, handleTransacction}) =>{
+const PetsForm = ({pet, errors, onChangeInput, handleTransacction, loading}) =>{
   return(
     <div className="form-container">
       <form className="form-pets">
@@ -55,9 +55,17 @@ const PetsForm = ({pet, errors, onChangeInput, handleTransacction}) =>{
           <span className="message-errors">{errors.owner}</span>
        </div>
        <div className="form-button" >
-          <button className="form-button__register" name="register" type="button" onClick={handleTransacction}>Registrar</button>
+          <button 
+            className="form-button__register" 
+            name="register" 
+            type="button" 
+            onClick={handleTransacction}
+            disabled={loading}
+            >Registrar</button>
        </div>
-       <div className="alert"></div>
+       <div className="alert">
+        <span className="alert__closebtn">x</span>
+       </div>
       </form>
     </div>
   )

@@ -22,6 +22,7 @@ export default function PetsTemplate(){
     }
   });
   const [errors,setErrors] = React.useState({});
+  const [loading,setLoading] = React.useState(false);
 
   const handleOnchangeInput = (e) => {
     const { name, value } = e.target;
@@ -49,6 +50,7 @@ export default function PetsTemplate(){
   }
 
   const handleValidation = () => {
+    setLoading(true);
     let isError = false;
     let errors = {};
     if(!pet.name){
@@ -85,7 +87,8 @@ export default function PetsTemplate(){
     }
     
     if(isError){
-      setErrors(errors)
+      setErrors(errors);
+      setLoading(false);
     }else{
       setErrors({});
       handleSave();
@@ -101,18 +104,21 @@ export default function PetsTemplate(){
       alert.classList.remove('alert__inprocess');
       alert.innerHTML = "La informacion de la mascota ha sido guardada";
       alert.classList.add('alert__success');
+      setLoading(false);
     },4000)
 
     setTimeout(() => {
+      alert.innerHTML = "Guardar mas mascotas";
+      alert.classList.remove('alert__success');
       handleClean();
-    },8000)
+    },6000)
   }
 
   const handleClean = () => {  
      setPet({...pet,
       name: "",
       age: "",
-      dateBirth:  "2000-01-01",
+      dateBirth:  "2022-01-01",
       sex: "",
       race: "",
       weight: "",
@@ -135,10 +141,11 @@ export default function PetsTemplate(){
         </div>
         <div>
           <PetsForm 
-            pet={pet} 
+            pet={pet}
+            loading={loading}
             onChangeInput={handleOnchangeInput} 
             errors={errors} 
-            handleTransacction={handleValidation} 
+            handleTransacction={handleValidation}
             />
         </div>
       </div>
