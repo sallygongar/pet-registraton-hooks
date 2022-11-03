@@ -2,7 +2,10 @@ import React from 'react';
 import Photo from './Photo';
 import PetsForm from './PetsForm';
 
+import validations from '../../assets/resources/validations';
 import '../../assets/styles/main.css';
+
+const { isNumber } = validations;
 
 export default function PetsTemplate(){
 
@@ -60,6 +63,11 @@ export default function PetsTemplate(){
     if(!pet.age){
       isError = true;
       errors['age'] = "*Por ingrese la edad"
+    }else{
+      if(!isNumber(pet.age)){
+        isError = true;
+        errors['age'] = "*La edad es incorrecta."
+      }
     }
     if(!pet.dateBirth){
       isError = true;
@@ -76,6 +84,11 @@ export default function PetsTemplate(){
     if(!pet.weight){
       isError = true;
       errors['weight'] = "*Por ingrese el peso"
+    }else{
+      if(!isNumber(pet.weight)){
+        isError = true;
+        errors['weight'] = "*El peso es incorrecto."
+      }
     }
     if(!pet.sterilized){
       isError = true;
